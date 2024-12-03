@@ -1,4 +1,4 @@
-package com.project.dental.Clinic;
+package com.project.dental.Doctor;
 
 public  class User {
     private String firstName;
@@ -71,5 +71,14 @@ public  class User {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    protected String getContact() {
+
+        return "";
+    }
+
+    protected String getName() {
+        return "";
     }
 }
