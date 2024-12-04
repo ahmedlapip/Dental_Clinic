@@ -1,0 +1,24 @@
+.custom-textfield {
+  -fx-background-color: #f0f0f0; /* Light gray background */
+  -fx-background-radius: 8; /* Rounded corners */
+  -fx-border-color: #cccccc; /* Border color */
+  -fx-border-width: 2; /* Border thickness */
+  -fx-border-radius: 8; /* Rounded border corners */
+  -fx-padding: 5 10; /* Padding inside the text field */
+  -fx-font-family: "Arial"; /* Font family */
+  -fx-font-size: 14px; /* Font size */
+  -fx-text-fill: #333333; /* Text color */
+  -fx-prompt-text-fill: #888888; /* Prompt text color */
+}
+
+.custom-textfield:focused {
+  -fx-border-color: #4a90e2; /* Change border color on focus */
+  -fx-background-color: #ffffff; /* White background on focus */
+}
+
+.custom-textfield:disabled {
+  -fx-background-color: #e6e6e6; /* Disabled background color */
+  -fx-border-color: #b3b3b3; /* Disabled border color */
+  -fx-text-fill: #999999; /* Disabled text color */
+  -fx-prompt-text-fill: #c2c2c2; /* Disabled prompt text color */
+}

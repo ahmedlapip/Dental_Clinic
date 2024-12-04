@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.dental.Patient.PatientController">
+    <TabPane layoutX="10" layoutY="10" prefHeight="580" prefWidth="780">
+        <!-- Tab 1: Update Personal Details -->
+        <Tab text="Update Details">
+            <AnchorPane>
+                <Label layoutX="20" layoutY="20" text="Email:" />
+                <TextField fx:id="emailField" layoutX="100" layoutY="20" prefWidth="200" />
+                <Label layoutX="20" layoutY="60" text="Mobile Number:" />
+                <TextField fx:id="mobileField" layoutX="150" layoutY="60" prefWidth="200" />
+                <Label layoutX="20" layoutY="100" text="Weight (kg):" />
+                <TextField fx:id="weightField" layoutX="150" layoutY="100" prefWidth="100" />
+                <Label layoutX="20" layoutY="140" text="Height (cm):" />
+                <TextField fx:id="heightField" layoutX="150" layoutY="140" prefWidth="100" />
+                <Button layoutX="100" layoutY="180" onAction="#updateDetails" text="Update" />
+            </AnchorPane>
+        </Tab>
+
+        <!-- Tab 2: Reserve Appointment -->
+        <Tab text="Reserve Appointment">
+            <AnchorPane>
+                <Label layoutX="20" layoutY="20" text="Date:" />
+                <DatePicker fx:id="appointmentDatePicker" layoutX="100" layoutY="20" />
+                <Label layoutX="20" layoutY="60" text="Time:" />
+                <ComboBox fx:id="timeComboBox" layoutX="100" layoutY="60" prefWidth="150" />
+                <Button layoutX="100" layoutY="100" onAction="#reserveAppointment" text="Reserve" />
+            </AnchorPane>
+        </Tab>
+
+        <!-- Tab 3: Cancel Reservation -->
+        <Tab text="Cancel Reservation">
+            <AnchorPane>
+                <Label layoutX="20" layoutY="20" text="Reservation ID:" />
+                <TextField fx:id="reservationIdField" layoutX="150" layoutY="20" prefWidth="200" />
+                <Button layoutX="150" layoutY="60" onAction="#cancelReservation" text="Cancel" />
+            </AnchorPane>
+        </Tab>
+
+        <!-- Tab 4: Check Prices -->
+        <Tab text="Check Prices">
+            <AnchorPane>
+                <Label layoutX="20" layoutY="20" text="Appointment Prices:" />
+                <TableView fx:id="pricesTable" layoutX="20" layoutY="50" prefHeight="400" prefWidth="700">
+                    <columns>
+                        <TableColumn text="Doctor" />
+                        <TableColumn text="Price" />
+                    </columns>
+                </TableView>
+            </AnchorPane>
+        </Tab>
+
+        <!-- Tab 5: Search Doctor -->
+        <Tab text="Search Doctor">
+            <AnchorPane>
+                <Label layoutX="20" layoutY="20" text="Search by Name or Mobile:" />
+                <TextField fx:id="searchField" layoutX="200" layoutY="20" prefWidth="200" />
+                <Button layoutX="420" layoutY="20" onAction="#searchDoctor" text="Search" />
+                <TableView fx:id="doctorSearchResultsTable" layoutX="20" layoutY="60" prefHeight="400" prefWidth="700">
+                    <columns>
+                        <TableColumn text="Name" />
+                        <TableColumn text="Specialty" />
+                        <TableColumn text="Mobile" />
+                    </columns>
+                </TableView>
+            </AnchorPane>
+        </Tab>
+
+        <!-- Tab 6: Display Available Appointments -->
+        <Tab text="Available Appointments">
+            <AnchorPane>
+                <Label layoutX="20" layoutY="20" text="Available Appointments:" />
+                <TableView fx:id="availableAppointmentsTable" layoutX="20" layoutY="50" prefHeight="400" prefWidth="700">
+                    <columns>
+                        <TableColumn text="Date" />
+                        <TableColumn text="Time" />
+                        <TableColumn text="Doctor" />
+                    </columns>
+                </TableView>
+            </AnchorPane>
+        </Tab>
+    </TabPane>
+</AnchorPane>

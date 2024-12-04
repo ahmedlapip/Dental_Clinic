@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="687.0" prefWidth="593.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.dental.Doctor.DoctorController">
+   <TabPane layoutY="135.0" prefHeight="584.0" prefWidth="692.0">
+      <!-- Tab 1: Create Prescription -->
+      <Tab closable="false" text="Create Prescription">
+         <AnchorPane>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e3fffc9e" height="584.0" stroke="#361010" strokeType="INSIDE" strokeWidth="0.0" width="692.0" />
+            <Label layoutX="20" layoutY="20" text="Patient Name:">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font></Label>
+            <TextField fx:id="patientNameField" layoutX="150.0" layoutY="15.0" prefWidth="200" styleClass="custom-textfield" stylesheets="@../../../TextField.css" />
+            <Label layoutX="20" layoutY="60" text="Medications:">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font></Label>
+            <TableView fx:id="medicationsTable" layoutX="150" layoutY="60" prefHeight="150" prefWidth="400">
+               <columns>
+                  <TableColumn text="Medication" />
+               </columns>
+            </TableView>
+            <TextField fx:id="medicationField" layoutX="150.0" layoutY="217.0" prefWidth="200" promptText="Add Medication" styleClass="custom-textfield" stylesheets="@../../../TextField.css" />
+            <Button layoutX="360.0" layoutY="217.0" minHeight="24.0" onAction="#addMedication" prefHeight="30.0" prefWidth="57.0" styleClass="custom-textfield" stylesheets="@../../../TextField.css" text="Add" />
+            <Label layoutX="20" layoutY="260" text="Dosage:">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font></Label>
+            <TextField fx:id="dosageField" layoutX="150.0" layoutY="255.0" prefWidth="200" styleClass="custom-textfield" stylesheets="@../../../TextField.css" />
+            <Label layoutX="20" layoutY="300" text="Instructions:">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font></Label>
+            <TextArea fx:id="instructionsArea" layoutX="150" layoutY="300" prefHeight="100" prefWidth="400" />
+            <Label layoutX="20" layoutY="420" text="Date:">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font></Label>
+            <DatePicker fx:id="datePicker" layoutX="150.0" layoutY="411.0" prefHeight="42.0" prefWidth="227.0" styleClass="custom-textfield" stylesheets="@../../../TextField.css" />
+            <Button layoutX="280.0" layoutY="488.0" minHeight="42.0" onAction="#savePrescription" prefHeight="42.0" prefWidth="160.0" styleClass="button-17" stylesheets="@../../../button.css" text="Save Prescription" />
+         </AnchorPane>
+      </Tab>
+
+      <!-- Tab 2: View Appointments -->
+      <Tab text="Appointments">
+         <AnchorPane>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e3fffc" height="559.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="692.0" />
+            <Label layoutX="20.0" layoutY="20.0" text="Date:">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <DatePicker fx:id="appointmentDatePicker" layoutX="80.0" layoutY="13.0" prefHeight="35.0" prefWidth="207.0" styleClass="custom-textfield" stylesheets="@../../../TextField.css" />
+            <Button layoutX="320.0" layoutY="18.0" onAction="#viewAppointments" styleClass="custom-textfield" stylesheets="@../../../TextField.css" text="View Appointments" />
+            <TableView fx:id="appointmentsTable" layoutX="5.0" layoutY="60.0" prefHeight="394.0" prefWidth="682.0">
+               <columns>
+                  <TableColumn text="Time" />
+                  <TableColumn text="Patient Name" />
+                  <TableColumn text="Reason" />
+               </columns>
+            </TableView>
+         </AnchorPane>
+      </Tab>
+
+      <!-- Tab 3: Contact Receptionist -->
+      <Tab text="Receptionist Info">
+         <AnchorPane prefHeight="458.0" prefWidth="525.0">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e3fffc" height="558.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="692.0" />
+            <Label layoutX="14.0" layoutY="14.0" text="Receptionist Contact Information:">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <TextArea fx:id="receptionistInfoArea" editable="false" layoutX="20" layoutY="50" prefHeight="104.0" prefWidth="657.0" />
+            <Button layoutX="20" layoutY="170" onAction="#refreshReceptionistInfo" text="Refresh" />
+         </AnchorPane>
+      </Tab>
+
+      <!-- Tab 4: Patient Information -->
+      <Tab text="Patient Information">
+         <AnchorPane>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e3fffc" height="557.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="692.0" />
+            <Label layoutX="14.0" layoutY="19.0" text="Patient ID:">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <TextField fx:id="patientIdField" layoutX="100" layoutY="20" prefWidth="200" />
+            <Button layoutX="320" layoutY="20" onAction="#getPatientInfo" text="Get Info" />
+            <TextArea fx:id="patientInfoArea" editable="false" layoutX="20" layoutY="60" prefHeight="378.0" prefWidth="642.0" />
+         </AnchorPane>
+      </Tab>
+
+      <!-- Tab 5: Change Availability -->
+      <Tab text="Change Availability">
+         <AnchorPane>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e3fffc" height="556.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="692.0" />
+            <Label layoutX="14.0" layoutY="15.0" text="Set Availability:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <ComboBox fx:id="availabilityComboBox" layoutX="168.0" layoutY="9.0" prefHeight="2.0" prefWidth="194.0" styleClass="custom-textfield" stylesheets="@../../../TextField.css" />
+            <Button layoutX="399.0" layoutY="13.0" onAction="#updateAvailability" styleClass="custom-textfield" stylesheets="@../../../TextField.css" text="Update" />
+            <Label layoutX="14.0" layoutY="55.0" text="Current Availability:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <TextArea fx:id="currentAvailabilityArea" editable="false" layoutX="20" layoutY="90" prefHeight="104.0" prefWidth="662.0" />
+         </AnchorPane>
+      </Tab>
+   </TabPane>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9effd8" height="135.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="692.0" />
+   <Label layoutX="61.0" layoutY="46.0" text="Doctor :">
+      <font>
+         <Font name="Arial Bold" size="36.0" />
+      </font>
+   </Label>
+</AnchorPane>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="732.0" prefWidth="775.0" stylesheets="@../../../button.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.dental.Settings.SceanController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d4d4d4d4" height="732.0" layoutX="264.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="510.0" />
+      <Button layoutX="585.0" layoutY="628.0" mnemonicParsing="false" onAction="#SwitchToLogin" prefHeight="51.0" prefWidth="126.0" styleClass="button-17" stylesheets="@../../../button.css" text="Log In" textAlignment="CENTER" textFill="#634258">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Button>
+      <Button cache="true" layoutX="342.0" layoutY="628.0" maxWidth="118.0" mnemonicParsing="false" onAction="#SwitchToSignup" prefHeight="51.0" prefWidth="118.0" styleClass="button-17" stylesheets="@../../../button.css" text="Sign Up" textFill="#634258">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fafafaec" height="730.0" layoutX="1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="262.0" />
+      <Label layoutX="497.0" layoutY="640.0" text="OR">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="294.0" prefHeight="51.0" prefWidth="226.0" text="For Your Health">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="132.0" fitWidth="126.0" layoutX="640.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../like_9738462.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="270.0" layoutY="14.0" text="BrightSmile Dental Care" textFill="#ff6f61">
+         <font>
+            <Font name="Arial Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="308.0" layoutY="63.0" text="123 Harmony Avenue" textFill="#ff6f61">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="255.0" fitWidth="262.0" layoutX="5.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../medicine_1590216.png" />
+         </image>
+      </ImageView>
+      <TabPane layoutX="268.0" layoutY="171.0" prefHeight="407.0" prefWidth="494.0" styleClass="custom-textfield" stylesheets="@../../../TextField.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Services " />
+          <Tab text="Doctors" />
+            <Tab text="Patients">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text="Receptionist">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text=" Prices">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="350.0" prefWidth="483.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

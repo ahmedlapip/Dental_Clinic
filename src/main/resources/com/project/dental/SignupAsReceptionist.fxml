@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="953.0" stylesheets="@../../../button.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.dental.Settings.SceanController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d4d4d4d4" height="578.0" layoutX="276.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="679.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fafafaec" height="578.0" layoutX="1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="274.0" />
+      <TextField layoutX="359.0" layoutY="65.0" prefHeight="35.0" prefWidth="234.0" styleClass="custom-textfield" stylesheets="@../../../TextField.css" />
+      <Label layoutX="294.0" layoutY="225.0" text="Username" textFill="#50bfa0">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="652.0" layoutY="225.0" text="Password" textFill="#50bfa0">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField layoutX="359.0" layoutY="264.0" prefHeight="35.0" prefWidth="234.0" styleClass="custom-textfield" stylesheets="@../../../TextField.css" />
+      <Label layoutX="312.0" layoutY="29.0" text="First Name" textFill="#50bfa0">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="145.0" prefHeight="35.0" prefWidth="147.0" text="SignUp As" textFill="#50bfa0">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="656.0" layoutY="29.0" text=" Last Name" textFill="#50bfa0">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField layoutX="692.0" layoutY="65.0" prefHeight="35.0" prefWidth="234.0" styleClass="custom-textfield" stylesheets="@../../../TextField.css" />
+      <Label layoutX="319.0" layoutY="129.0" text="Email" textFill="#50bfa0">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField layoutX="359.0" layoutY="167.0" prefHeight="35.0" prefWidth="234.0" styleClass="custom-textfield" stylesheets="@../../../TextField.css" />
+      <TextField layoutX="692.0" layoutY="168.0" prefHeight="35.0" prefWidth="234.0" styleClass="custom-textfield" stylesheets="@../../../TextField.css" />
+      <Label layoutX="633.0" layoutY="129.0" text="Mobile Number" textFill="#50bfa0">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="AgeTextField" layoutX="359.0" layoutY="368.0" prefHeight="35.0" prefWidth="234.0" styleClass="custom-textfield" stylesheets="@../../../TextField.css" />
+      <Label layoutX="340.0" layoutY="330.0" text="Age" textFill="#50bfa0">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="666.0" layoutY="330.0" text="Gander" textFill="#50bfa0">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <PasswordField layoutX="692.0" layoutY="264.0" prefHeight="35.0" prefWidth="234.0" styleClass="custom-textfield" stylesheets="@../../../TextField.css" />
+      <Label layoutX="39.0" layoutY="186.0" prefHeight="40.0" prefWidth="174.0" text="Receptionist" textFill="#50bfa0">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="244.0" fitWidth="249.0" layoutX="16.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../reception.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="373.0" layoutY="471.0" mnemonicParsing="false" onAction="#SwitchToReceptionist" prefHeight="48.0" prefWidth="158.0" styleClass="button-17" stylesheets="@../../../button.css" text="Sign Up" />
+      <Button layoutX="651.0" layoutY="471.0" mnemonicParsing="false" onAction="#SwitchToSignup" prefHeight="48.0" prefWidth="158.0" styleClass="button-17" stylesheets="@../../../button.css" text="Back" />
+      <ChoiceBox fx:id="ganderChoiceBox" layoutX="730.0" layoutY="366.0" prefHeight="9.0" prefWidth="158.0" styleClass="custom-textfield" stylesheets="@../../../TextField.css" />
+   </children>
+</AnchorPane>
