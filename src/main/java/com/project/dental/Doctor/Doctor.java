@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+
+import com.project.dental.Doctor.User;
 import com.project.dental.Receptionist.Receptionist;
 import com.project.dental.Patient.Patient;
 

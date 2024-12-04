@@ -1,5 +1,6 @@
 package com.project.dental.Patient;
 import com.project.dental.Clinic.*;
+import com.project.dental.Doctor.User;
 
 public class Patient extends User {
 protected String patientHistory, age, gender, bloodType;

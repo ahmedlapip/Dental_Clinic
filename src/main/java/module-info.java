@@ -1,4 +1,4 @@
-module com.example.oop {
+module com.project.dental{
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -11,6 +11,13 @@ module com.example.oop {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires java.desktop;
+
+
+    exports com.project.dental to javafx.graphics;  // Export to javafx.graphics
+
+    opens com.project.dental to javafx.fxml;  // If using FXML, you may also need to open the package
+
+
 
     opens com.project.dental.Patient to javafx.fxml;
     opens com.project.dental.Doctor to javafx.fxml;

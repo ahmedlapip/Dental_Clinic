@@ -73,12 +73,12 @@ public  class User {
         this.username = username;
     }
 
-    protected String getContact() {
+    public String getContact() {
 
         return "";
     }
 
-    protected String getName() {
+    public String getName() {
         return "";
     }
 }

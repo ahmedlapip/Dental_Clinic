@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="550.0" style="-fx-border-color: purble;"
+            xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.project.dental.Settings.SignUp">
+    <Label layoutX="187.0" layoutY="116.0" prefHeight="18.0" prefWidth="175.0" text="Welcome To Our Dental Clinic">
+        <font>
+            <Font name="System Bold" size="12.0"/>
+        </font>
+    </Label>
+    <ImageView fitHeight="63.0" fitWidth="57.0" layoutX="241.0" layoutY="36.0" pickOnBounds="true"
+               preserveRatio="true">
+        <Image url="@../../../like_9738462.png"/>
+    </ImageView>
+    <Button id="signup" layoutX="195.0" layoutY="545.0" mnemonicParsing="false" onAction="#signup" prefHeight="2.0"
+            prefWidth="134.0" text="SignUp"/>
+    <Button id="Login" layoutX="298.0" layoutY="421.0" mnemonicParsing="false" onAction="#login" prefHeight="26.0"
+            prefWidth="57.0" style="-fx-border-color: 0;" text="Login"/>
+    <CheckBox id="remember" layoutX="178.0" layoutY="425.0" mnemonicParsing="false" text="Remember Me"/>
+    <ChoiceBox id="loginas" fx:id="login_menu" layoutX="174.0" layoutY="318.0" prefHeight="26.0" prefWidth="195.0"
+               style="-fx-background-color: 0; -fx-border-color: #6E9CB4;"/>
+    <PasswordField id="password" layoutX="174.0" layoutY="256.0" onAction="#getPassword" prefHeight="27.0"
+                   prefWidth="195.0" promptText="Password"
+                   style="-fx-background-color: trans; -fx-border-color: #6E9CB4;"/>
+    <TextField id="Username" layoutX="174.0" layoutY="196.0" onAction="#getusername" prefHeight="26.0" prefWidth="195.0"
+               promptText="Username" style="-fx-background-color: trans; -fx-border-color: #6E9CB4;"/>
+    <Label layoutX="183.0" layoutY="178.0" prefHeight="18.0" prefWidth="175.0" text="Username" textFill="#918c8cd4"/>
+    <Label layoutX="178.0" layoutY="238.0" prefHeight="18.0" prefWidth="175.0" text=" Password" textFill="#918c8cd4"/>
+    <Label layoutX="176.0" layoutY="299.0" prefHeight="18.0" prefWidth="175.0" text="Login As" textFill="#918c8cd4"/>
+    <Button layoutX="196.0" layoutY="362.0" mnemonicParsing="false" onAction="#forgotPass"
+            style="-fx-background-color: 0;" text="Forgot Your Password" underline="true"/>
+</AnchorPane>

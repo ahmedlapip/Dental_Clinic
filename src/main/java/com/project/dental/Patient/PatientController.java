@@ -33,7 +33,7 @@ public class PatientController {
     @FXML
     public void initialize() {
         // Populate time combo box with example time slots
-        timeComboBox.setItems(FXCollections.observableArrayList("9:00 AM", "10:00 AM", "11:00 AM", "2:00 PM", "3:00 PM"));
+        timeComboBox.setItems(FXCollections.observableArrayList("9:00 AM", "10:00 AM", "11:00 AM", "2:00 PM", "3:00 PM","4:00PM"));
 
         // Populate example data for prices and available appointments
         loadExamplePrices();
@@ -101,6 +101,7 @@ public class PatientController {
             showAlert("Error", "Please enter a name or mobile number to search for a doctor.", Alert.AlertType.ERROR);
             return;
         }
+        else
 
         // Search for doctors by name or mobile (replace with database logic)
         System.out.printf("Searching for doctor: Query=%s%n", query);
