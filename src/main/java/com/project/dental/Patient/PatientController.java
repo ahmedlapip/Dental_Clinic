@@ -1,12 +1,12 @@
 package com.project.dental.Patient;
 
+import com.project.dental.Settings.FileHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.collections.FXCollections;
 
-import java.time.LocalDate;
 
-public class PatientController {
+public class PatientController extends Patient {
     // Update Details
     @FXML private TextField emailField;
     @FXML private TextField mobileField;
@@ -16,7 +16,7 @@ public class PatientController {
     // Reserve Appointment
     @FXML private DatePicker appointmentDatePicker;
     @FXML private ComboBox<String> timeComboBox;
-
+   @FXML ComboBox<String> CauseBox ;
     // Cancel Reservation
     @FXML private TextField reservationIdField;
 
@@ -26,7 +26,9 @@ public class PatientController {
     // Search Doctor
     @FXML private TextField searchField;
     @FXML private TableView<String> doctorSearchResultsTable;
-
+@FXML private ComboBox<String> Timer;
+@FXML private ComboBox<String> DoctorName;
+FileHandler fileHandler = new FileHandler();
     // Display Available Appointments
     @FXML private TableView<String> availableAppointmentsTable;
 
@@ -34,6 +36,8 @@ public class PatientController {
     public void initialize() {
         // Populate time combo box with example time slots
         timeComboBox.setItems(FXCollections.observableArrayList("9:00 AM", "10:00 AM", "11:00 AM", "2:00 PM", "3:00 PM","4:00PM"));
+        CauseBox.setItems(FXCollections.observableArrayList("X","Y"));
+        DoctorName.setItems(FXCollections.observableArrayList("Ali","Ahmed"));
 
         // Populate example data for prices and available appointments
         loadExamplePrices();
@@ -52,31 +56,45 @@ public class PatientController {
 
     @FXML
     public void updateDetails() {
-        String email = emailField.getText();
-        String mobile = mobileField.getText();
-        String weight = weightField.getText();
-        String height = heightField.getText();
+       email = emailField.getText();
+       mobileNumber = mobileField.getText();
+       String weight = weightField.getText();
+       String height = heightField.getText();
+       super.weight=Float.parseFloat(weight);
+       super.height=Float.parseFloat(height);
 
-        if (email.isEmpty() || mobile.isEmpty() || weight.isEmpty() || height.isEmpty()) {
+
+        if (email.isEmpty()|| mobileNumber.isEmpty() || weight.isEmpty() ||height.isEmpty()) {
             showAlert("Error", "Please fill out all fields to update your details.", Alert.AlertType.ERROR);
-            return;
+
         }
-        showAlert("Success", "Your details have been updated!", Alert.AlertType.INFORMATION);
+        //check if true info
+
     }
 
     @FXML
     public void reserveAppointment() {
-        LocalDate date = appointmentDatePicker.getValue();
-        String time = timeComboBox.getValue();
+
+
+        date = appointmentDatePicker.getValue();
+        time = timeComboBox.getValue();
+        String Cause = CauseBox.getValue();
+        String name = DoctorName.getValue();
+
+
+
+
+
+
 
         if (date == null || time == null) {
             showAlert("Error", "Please select a date and time to reserve an appointment.", Alert.AlertType.ERROR);
-            return;
         }
 
         // Reserve the appointment (replace with database logic)
         System.out.printf("Appointment reserved: Date=%s, Time=%s%n", date, time);
         showAlert("Success", "Your appointment has been reserved!", Alert.AlertType.INFORMATION);
+        fileHandler.saveRecord(date,time,Cause,name);
     }
 
     @FXML

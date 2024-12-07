@@ -11,6 +11,7 @@ module com.project.dental{
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires java.desktop;
+    requires annotations;
 
 
     exports com.project.dental to javafx.graphics;  // Export to javafx.graphics

@@ -1,13 +1,21 @@
 package com.project.dental.Patient;
 import com.project.dental.Clinic.*;
-import com.project.dental.Doctor.User;
+import com.project.dental.Clinic.User;
+import com.project.dental.Settings.FileHandler;
+
+import java.time.LocalDate;
 
 public class Patient extends User {
 protected String patientHistory, age, gender, bloodType;
-protected float weight, height;
-protected int ID=0;
+protected float weight=0;
+protected float height=0;
+protected  int ID=0;
 public static int cnt=0;
+public LocalDate date;
+protected String time;
 
+
+public Patient() {}
 
     ///login
     public Patient (String userName,String password ){

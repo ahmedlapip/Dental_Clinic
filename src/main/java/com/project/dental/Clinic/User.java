@@ -1,12 +1,14 @@
-package com.project.dental.Doctor;
+package com.project.dental.Clinic;
 
-public  class User {
-    private String firstName;
-    private String lastName;
+import com.project.dental.Settings.FileHandler;
+
+public  class User  {
+    protected String firstName;
+    protected String lastName;
     protected String username;
-    private String email;
+    protected String email;
     protected String password;
-    private String mobileNumber;
+    protected String mobileNumber;
 
     public User(String firstName, String lastName, String username, String email, String password, String mobileNumber) {
         this.firstName = firstName;
@@ -79,6 +81,6 @@ public  class User {
     }
 
     public String getName() {
-        return "";
+        return firstName + " " + lastName;
     }
 }

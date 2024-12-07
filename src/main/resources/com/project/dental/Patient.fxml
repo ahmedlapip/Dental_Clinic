@@ -2,45 +2,76 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.dental.Patient.PatientController">
 
 
-    <TabPane layoutX="10" layoutY="10" prefHeight="580" prefWidth="780">
+    <TabPane layoutX="10" layoutY="10" prefHeight="618.0" prefWidth="687.0" style="-fx-background-color: 0;">
         <!-- Tab 1: Update Personal Details -->
         <Tab text="Update Details">
             <AnchorPane>
-                <Label layoutX="20" layoutY="20" text="Email:" />
-                <TextField fx:id="emailField" layoutX="152.0" layoutY="22.0" prefWidth="200" />
-                <Label layoutX="20" layoutY="60" text="Mobile Number:" />
-                <TextField fx:id="mobileField" layoutX="150" layoutY="60" prefWidth="200" />
-                <Label layoutX="20" layoutY="100" text="Weight (kg):" />
-                <TextField fx:id="weightField" layoutX="150" layoutY="100" prefWidth="100" />
-                <Label layoutX="20" layoutY="140" text="Height (cm):" />
-                <TextField fx:id="heightField" layoutX="150" layoutY="140" prefWidth="100" />
-                <Button layoutX="100" layoutY="180" onAction="#updateDetails" text="Update" />
+                <Label layoutX="225.0" layoutY="120.0" text="Email:" textFill="#454242e0">
+               <font>
+                  <Font name="Arial Bold Italic" size="14.0" />
+               </font></Label>
+                <TextField fx:id="emailField" layoutX="206.0" layoutY="145.0" prefHeight="27.0" prefWidth="330.0" style="-fx-background-color: 0; -fx-border-color: #6E9CB4;" />
+                <Label layoutX="214.0" layoutY="192.0" text="Mobile Number:" textFill="#454242e0">
+               <font>
+                  <Font name="Arial Bold Italic" size="14.0" />
+               </font></Label>
+                <Label layoutX="214.0" layoutY="261.0" text="Weight (kg):" textFill="#454242e0">
+               <font>
+                  <Font name="Arial Bold Italic" size="14.0" />
+               </font></Label>
+                <Label layoutX="213.0" layoutY="325.0" text="Height (cm):" textFill="#454242e0">
+               <font>
+                  <Font name="Arial Bold Italic" size="14.0" />
+               </font></Label>
+                <Button layoutX="302.0" layoutY="428.0" onAction="#updateDetails" prefHeight="26.0" prefWidth="83.0" text="Update" />
+            <TextField fx:id="emailField1" layoutX="206.0" layoutY="216.0" prefHeight="27.0" prefWidth="330.0" style="-fx-background-color: 0; -fx-border-color: #6E9CB4;" />
+            <TextField fx:id="emailField11" layoutX="207.0" layoutY="285.0" prefHeight="27.0" prefWidth="330.0" style="-fx-background-color: 0; -fx-border-color: #6E9CB4;" />
+            <TextField fx:id="emailField111" layoutX="206.0" layoutY="349.0" prefHeight="27.0" prefWidth="330.0" style="-fx-background-color: 0; -fx-border-color: #6E9CB4;" />
             </AnchorPane>
         </Tab>
 
         <!-- Tab 2: Reserve Appointment -->
         <Tab text="Reserve Appointment">
-            <AnchorPane>
-                <Label layoutX="20" layoutY="20" text="Date:" />
-                <DatePicker fx:id="appointmentDatePicker" layoutX="100" layoutY="20" />
-                <Label layoutX="20" layoutY="60" text="Time:" />
-                <ComboBox fx:id="timeComboBox" layoutX="100" layoutY="60" prefWidth="150" />
-                <Button layoutX="100" layoutY="100" onAction="#reserveAppointment" text="Reserve" />
+            <AnchorPane style="-fx-background-color: 0;">
+                <Label layoutX="196.0" layoutY="123.0" text="Date" textFill="#474444db">
+               <font>
+                  <Font name="Arial Bold Italic" size="14.0" />
+               </font></Label>
+                <DatePicker fx:id="appointmentDatePicker" layoutX="184.0" layoutY="149.0" prefHeight="27.0" prefWidth="330.0" style="-fx-background-color: 0; -fx-border-color: #6E9CB4;" />
+                <Label layoutX="195.0" layoutY="186.0" text="Time" textFill="#474444db">
+               <font>
+                  <Font name="Arial Bold Italic" size="14.0" />
+               </font></Label>
+                <ComboBox fx:id="timeComboBox" layoutX="185.0" layoutY="208.0" prefHeight="27.0" prefWidth="330.0" style="-fx-background-color: 0; -fx-border-color: #6E9CB4;" />
+            <Label layoutX="190.0" layoutY="251.0" text="Doctor Name" textFill="#474444db">
+               <font>
+                  <Font name="Arial Bold Italic" size="14.0" />
+               </font></Label>
+            <ComboBox fx:id="CauseBox" layoutX="188.0" layoutY="339.0" prefHeight="27.0" prefWidth="330.0" style="-fx-background-color: 0; -fx-border-color: #6E9CB4;" visibleRowCount="2" />
+            <ComboBox fx:id="DoctorName" layoutX="185.0" layoutY="275.0" prefHeight="27.0" prefWidth="330.0" style="-fx-background-color: 0; -fx-border-color: #6E9CB4;" visibleRowCount="2" />
+            <Label layoutX="190.0" layoutY="316.0" text="Reservation Cause" textFill="#474444db">
+               <font>
+                  <Font name="Arial Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="291.0" layoutY="411.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="79.0" text="Reserve" />
             </AnchorPane>
         </Tab>
 
         <!-- Tab 3: Cancel Reservation -->
         <Tab text="Cancel Reservation">
             <AnchorPane>
-                <Label layoutX="20" layoutY="20" text="Reservation ID:" />
-                <TextField fx:id="reservationIdField" layoutX="150" layoutY="20" prefWidth="200" />
-                <Button layoutX="150" layoutY="60" onAction="#cancelReservation" text="Cancel" />
+                <Label layoutX="287.0" layoutY="218.0" text="Reservation ID" textFill="#474444e0">
+               <font>
+                  <Font name="Arial Bold Italic" size="14.0" />
+               </font></Label>
+                <TextField fx:id="reservationIdField" layoutX="211.0" layoutY="252.0" prefHeight="29.0" prefWidth="274.0" style="-fx-background-color: 0; -fx-border-color: #6E9CB4;" />
+                <Button layoutX="313.0" layoutY="326.0" onAction="#cancelReservation" prefHeight="26.0" prefWidth="77.0" text="Cancel" />
             </AnchorPane>
         </Tab>
 
@@ -48,10 +79,10 @@
         <Tab text="Check Prices">
             <AnchorPane>
                 <Label layoutX="20" layoutY="20" text="Appointment Prices:" />
-                <TableView fx:id="pricesTable" layoutX="20" layoutY="50" prefHeight="400" prefWidth="700">
+                <TableView fx:id="pricesTable" layoutX="20" layoutY="52.0" prefHeight="538.0" prefWidth="687.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
                     <columns>
-                        <TableColumn id="AppointPrice" prefWidth="219.79999160766602" text="Doctor" />
-                        <TableColumn prefWidth="88.19999694824219" text="Price" />
+                        <TableColumn id="AppointPrice" prefWidth="473.0000057220459" text="Doctor" />
+                        <TableColumn prefWidth="213.39993286132812" text="Price" />
                     </columns>
                 </TableView>
             </AnchorPane>
@@ -59,11 +90,11 @@
 
         <!-- Tab 5: Search Doctor -->
         <Tab text="Search Doctor">
-            <AnchorPane>
+            <AnchorPane prefHeight="590.0" prefWidth="682.0">
                 <Label layoutX="20" layoutY="20" text="Search by Name or Mobile:" />
-                <TextField fx:id="searchField" layoutX="200" layoutY="20" prefWidth="200" />
-                <Button layoutX="420" layoutY="20" onAction="#searchDoctor" text="Search" />
-                <TableView fx:id="doctorSearchResultsTable" layoutX="20" layoutY="60" prefHeight="400" prefWidth="700">
+                <TextField fx:id="searchField" layoutX="200.0" layoutY="17.0" prefHeight="27.0" prefWidth="257.0" style="-fx-background-color: 0; -fx-border-color: #6E9CB4;" />
+                <Button layoutX="274.0" layoutY="58.0" onAction="#searchDoctor" text="Search" />
+                <TableView fx:id="doctorSearchResultsTable" layoutX="20" layoutY="98.0" prefHeight="492.0" prefWidth="687.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="98.0">
                     <columns>
                         <TableColumn prefWidth="187.6000099182129" text="Name" />
                         <TableColumn prefWidth="123.59999084472656" text="Specialty" />
@@ -77,11 +108,11 @@
         <Tab text="Available Appointments">
             <AnchorPane>
                 <Label layoutX="20" layoutY="20" text="Available Appointments:" />
-                <TableView fx:id="availableAppointmentsTable" layoutX="20" layoutY="50" prefHeight="400" prefWidth="700">
+                <TableView fx:id="availableAppointmentsTable" layoutY="49.0" prefHeight="491.0" prefWidth="687.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="49.0">
                     <columns>
-                        <TableColumn text="Date" />
-                        <TableColumn text="Time" />
-                        <TableColumn text="Doctor" />
+                        <TableColumn prefWidth="170.0000057220459" text="Date" />
+                        <TableColumn prefWidth="122.79998779296875" text="Time" />
+                        <TableColumn prefWidth="393.6000061035156" text="Doctor" />
                     </columns>
                 </TableView>
             </AnchorPane>
